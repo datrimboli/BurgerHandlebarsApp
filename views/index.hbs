@@ -1,0 +1,63 @@
+<div class="jumbotron">
+  <h1 class="display-4">Burger App</h1>
+  <p class="lead">This is a simple application to keep track of burgers, their prices, and whether or not they have
+    already been purchased.</p>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <form>
+        <div class="form-group">
+          <label for="product">Product Name</label>
+          <input type="text" class="form-control" id="product">
+        </div>
+        <div class="form-group">
+          <label for="quantity">quantity</label>
+          <input type="number" class="form-control" id="quantity">
+        </div>
+        <div class="form-group">
+          <label for="cost">Price</label>
+          <input type="number" class="form-control" id="cost">
+        </div>
+        <button type="submit" id="addBurger" class="btn btn-primary">Add Burger</button>
+      </form>
+    </div>
+  </div>
+  <hr>
+  <div class="row">
+    <div class="col-md-6">
+      <ul id="notPurchased" class="list-group">
+        <h2>Not Purchased</h2>
+        {{#each burgers}}
+        {{#unless this.purchased}}
+        <li id="{{ this.id }}" class="list-group-item">
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">{{ this.name }}</h5>
+            <button data-name="{{ this.name }}" data-quantity="{{ this.quantity }}" data-cost="{{ this.cost }}"
+              class="purchase btn btn-success">✓</button>
+          </div>
+          <p class="mb-1">Quantity: {{ this.quantity }}</p>
+          <small>Price: ${{ this.cost }}</small>
+        </li>
+        {{/unless}}
+        {{/each}}
+      </ul>
+    </div>
+    <div class="col-md-6">
+      <ul id="purchased" class="list-group">
+        <h2>Purchased</h2>
+        {{#each burgers}}
+        {{#if this.purchased}}
+        <li id="{{ this.id }}" class="list-group-item">
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">{{ this.name }}</h5>
+          </div>
+          <p class="mb-1">Quantity: {{ this.quantity }}</p>
+          <small>Price: ${{ this.cost }}</small>
+        </li>
+        {{/if}}
+        {{/each}}
+      </ul>
+    </div>
+  </div>
+</div>
