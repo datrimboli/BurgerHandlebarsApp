@@ -1,4 +1,6 @@
+// Bringing in express
 const router = require('express').Router()
+// Creating burger variable
 const burger = require('../models/burger.js')
 
 // Get all burgers
