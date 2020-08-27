@@ -18,7 +18,7 @@ document.getElementById('addBurger').addEventListener('click', event => {
           data-name="${document.getElementById('product').value}"
           data-quantity="${document.getElementById('quantity').value}"
           data-cost="${document.getElementById('cost').value}"
-          class="purchase btn btn-success">✓</button>
+          class="purchase btn btn-warning">Devour it!</button>
        </div>
        <p class="mb-1">Quantity: ${document.getElementById('quantity').value}</p>
        <small>Price: ${document.getElementById('cost').value}</small>
