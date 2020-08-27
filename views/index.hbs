@@ -3,23 +3,23 @@
   <img  src="https://resizeimage.net/mypic/wtppMJqrRTFwV0gj/Qtm7v/burger.png" alt="">
   <p class="lead center textcolor">Create your dream burger.... then devour it!!</p>
 </div>
-<div class="container">
+<div class="container bkgcolor radius">
   <div class="row">
     <div class="col-md-12">
       <form>
         <div class="form-group">
-          <label for="product">What is the burger's name?</label>
+          <label class="textcolor" for="product">What is the burger's name?</label>
           <input type="text" class="form-control" id="product">
         </div>
         <div class="form-group">
-          <label for="quantity">How many burgers?</label>
+          <label class="textcolor" for="quantity">How many burgers?</label>
           <input type="number" class="form-control" id="quantity">
         </div>
         <div class="form-group">
-          <label for="cost">How much does the burger cost?</label>
+          <label class="textcolor" for="cost">How much does the burger cost?</label>
           <input type="number" class="form-control" id="cost">
         </div>
-        <button type="submit" id="addBurger" class="btn btn-primary">Add Burger</button>
+        <button type="submit" id="addBurger" class="btn btn-warning">Add Burger</button>
       </form>
     </div>
   </div>
@@ -27,7 +27,7 @@
   <div class="row">
     <div class="col-md-6">
       <ul id="notPurchased" class="list-group">
-        <h2>To Be Devoured</h2>
+        <h2 class="textcolor">To Be Devoured</h2>
         {{#each burgers}}
         {{#unless this.purchased}}
         <li id="{{ this.id }}" class="list-group-item">
@@ -44,8 +44,8 @@
       </ul>
     </div>
     <div class="col-md-6">
-      <ul id="purchased" class="list-group">
-        <h2>Devoured</h2>
+      <ul id="purchased" class="list-group botmar">
+        <h2 class="textcolor">Devoured</h2>
         {{#each burgers}}
         {{#if this.purchased}}
         <li id="{{ this.id }}" class="list-group-item">

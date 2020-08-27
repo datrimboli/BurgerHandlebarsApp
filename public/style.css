@@ -9,3 +9,11 @@
 .bkgcolor {
   background-color: black;
 }
+
+.botmar {
+  margin-bottom: 5%;
+}
+
+.radius {
+  border-radius: 25px  ;
+}
