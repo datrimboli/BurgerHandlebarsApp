@@ -1,3 +1,11 @@
 .center {
   text-align: center;
 }
+
+.textcolor {
+  color: beige;
+}
+
+.bkgcolor {
+  background-color: black;
+}
