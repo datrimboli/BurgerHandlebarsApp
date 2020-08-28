@@ -14,4 +14,4 @@ After clicking the Devour It! button, the burger you devoured with be moved onto
 
 Yum!
 
-Link to deployed app on heroku: 
+Link to deployed app on heroku: https://rocky-hamlet-33114.herokuapp.com/
