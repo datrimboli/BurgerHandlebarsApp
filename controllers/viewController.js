@@ -1,4 +1,6 @@
+// Router variable setup
 const router = require('express').Router()
+// Variable burger linked to burger.js
 const burger = require('../models/burger.js')
 
 router.get('/', (req, res) => {
@@ -6,5 +8,5 @@ router.get('/', (req, res) => {
     res.render('index', { burgers })
   })
 })
-
+// Exporting router
 module.exports = router

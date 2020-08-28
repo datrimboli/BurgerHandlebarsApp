@@ -1,8 +1,12 @@
+{{!-- Burger Town Header --}}
 <div class="jumbotron center bkgcolor">
-  <h1 class="display-4 center textcolor">Burger App</h1>
-  <img  src="./photos/burger.png" alt="burger">
-  <p class="lead center textcolor">Create your dream burger.... then devour it!!</p>
+  <h1 class="display-4 center textcolor">Welcome to Burger Town!</h1>
+  {{!-- Burger Image --}}
+  <img src="./photos/burger.png" alt="burger">
+  {{!-- Sub text --}}
+  <p class="lead center textcolor">Create your dream burger.... then devour it!</p>
 </div>
+{{!-- Burger name prompt --}}
 <div class="container bkgcolor radius">
   <div class="row">
     <div class="col-md-12">
@@ -11,7 +15,7 @@
           <label class="textcolor" for="product">What is the burger's name?</label>
           <input type="text" class="form-control" id="product">
         </div>
-        
+        {{!-- Add Burger Button --}}
         <button type="submit" id="addBurger" class="btn btn-warning">Add Burger</button>
       </form>
     </div>
@@ -19,6 +23,7 @@
   <hr>
   <div class="row">
     <div class="col-md-6">
+      {{!-- To be devoured Burger list --}}
       <ul id="notPurchased" class="list-group">
         <h2 class="textcolor">To Be Devoured</h2>
         {{#each burgers}}
@@ -26,15 +31,15 @@
         <li id="{{ this.id }}" class="list-group-item">
           <div class="d-flex w-100 justify-content-between">
             <h5 class="mb-1">{{ this.name }}</h5>
-            <button data-name="{{ this.name }}" 
-              class="purchase btn btn-warning">Devour It!</button>
+            <button data-name="{{ this.name }}" {{!-- Devour it! button --}} class="purchase btn btn-warning">Devour
+              It!</button>
           </div>
-          
         </li>
         {{/unless}}
         {{/each}}
       </ul>
     </div>
+    {{!-- Devoured Burger list --}}
     <div class="col-md-6">
       <ul id="purchased" class="list-group botmar">
         <h2 class="textcolor">Devoured</h2>
@@ -44,7 +49,6 @@
           <div class="d-flex w-100 justify-content-between">
             <h5 class="mb-1">{{ this.name }}</h5>
           </div>
-         
         </li>
         {{/if}}
         {{/each}}

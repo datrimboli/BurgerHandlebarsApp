@@ -30,5 +30,5 @@ router.delete('/burgers/:id', (req, res) => {
     res.sendStatus(200)
   })
 })
-
+// Exporting router
 module.exports = router
