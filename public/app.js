@@ -3,8 +3,8 @@ document.getElementById('addBurger').addEventListener('click', event => {
 
   axios.post('/api/burgers', {
     name: document.getElementById('product').value,
-    quantity: document.getElementById('quantity').value,
-    cost: document.getElementById('cost').value,
+    quantity: 3,
+    cost: 4,
     purchased: false
   })
     .then(({ data }) => {
@@ -16,12 +16,9 @@ document.getElementById('addBurger').addEventListener('click', event => {
          <h5 class="mb-1">${document.getElementById('product').value}</h5>
          <button 
           data-name="${document.getElementById('product').value}"
-          data-quantity="${document.getElementById('quantity').value}"
-          data-cost="${document.getElementById('cost').value}"
           class="purchase btn btn-warning">Devour it!</button>
        </div>
-       <p class="mb-1">Quantity: ${document.getElementById('quantity').value}</p>
-       <small>Price: ${document.getElementById('cost').value}</small>
+      
       `
       document.getElementById('notPurchased').append(burgerElem)
 
@@ -45,8 +42,7 @@ document.addEventListener('click', event => {
        <div class="d-flex w-100 justify-content-between">
          <h5 class="mb-1">${event.target.dataset.name}</h5>
        </div>
-       <p class="mb-1">Quantity: ${event.target.dataset.quantity}</p>
-       <small>Price: ${event.target.dataset.cost}</small>
+      
       `
         document.getElementById('purchased').append(burgerElem)
         event.target.parentNode.parentNode.remove()

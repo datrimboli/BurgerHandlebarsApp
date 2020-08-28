@@ -11,14 +11,7 @@
           <label class="textcolor" for="product">What is the burger's name?</label>
           <input type="text" class="form-control" id="product">
         </div>
-        <div class="form-group">
-          <label class="textcolor" for="quantity">How many burgers?</label>
-          <input type="number" class="form-control" id="quantity">
-        </div>
-        <div class="form-group">
-          <label class="textcolor" for="cost">How much does the burger cost?</label>
-          <input type="number" class="form-control" id="cost">
-        </div>
+        
         <button type="submit" id="addBurger" class="btn btn-warning">Add Burger</button>
       </form>
     </div>
@@ -33,11 +26,10 @@
         <li id="{{ this.id }}" class="list-group-item">
           <div class="d-flex w-100 justify-content-between">
             <h5 class="mb-1">{{ this.name }}</h5>
-            <button data-name="{{ this.name }}" data-quantity="{{ this.quantity }}" data-cost="{{ this.cost }}"
+            <button data-name="{{ this.name }}" 
               class="purchase btn btn-warning">Devour It!</button>
           </div>
-          <p class="mb-1">Quantity: {{ this.quantity }}</p>
-          <small>Price: ${{ this.cost }}</small>
+          
         </li>
         {{/unless}}
         {{/each}}
@@ -52,8 +44,7 @@
           <div class="d-flex w-100 justify-content-between">
             <h5 class="mb-1">{{ this.name }}</h5>
           </div>
-          <p class="mb-1">Quantity: {{ this.quantity }}</p>
-          <small>Price: ${{ this.cost }}</small>
+         
         </li>
         {{/if}}
         {{/each}}
