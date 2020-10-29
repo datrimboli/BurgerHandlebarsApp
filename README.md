@@ -1,5 +1,7 @@
 # BurgerHandlebarsApp
 
+# Description
+
 This app allows the user to create their dream burger... then devour it!
 
 Upon entering the platform, the user will be prompted to enter the burger they desire into an input box.
